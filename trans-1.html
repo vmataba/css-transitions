@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruits</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .box {
+            width: 80%;
+            height: 80%;
+            transition-property: width, height;
+            transition-duration: 400ms;
+        }
+
+        .box:hover,
+        .box:focus {
+            width: 90%;
+            height: 90%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="h1 text-center" style="color: gray">Pickup a fruit</div>
+
+        <hr>
+
+        <button class="btn btn-sm btn-primary pull-left" onclick="hideShowBox()" hidden>Hide/Show</button>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="box card shadow" id="box">
+                    <img src="https://ecigs-scotland.com/wp-content/uploads/2019/01/apple.jpg"
+                        alt="APPLE LOGO" style="width:100%; height: 90%">
+                    <p class="text-center" style="margin-bottom: 9px; color: gray; font-weight: bold">
+                        Apple @1,000/=
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="box card shadow" id="box2">
+                    <img src="http://soappotions.com/wp-content/uploads/2017/10/orange.jpg"
+                        alt="ORANGE LOGO" style="width:100%; height: 90%">
+                    <p class="text-center" style="margin-bottom: 9px; color: gray; font-weight: bold">
+                        Orange @500/=
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="box card shadow" id="box3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPJfljblCDVtkYcWcthqbMsLX0f0Y2GPrCUhlahkZEM2DhBmfz"
+                        alt="MANGO LOGO" style="width:100%; height: 90%">
+                    <p class="text-center" style="margin-bottom: 9px; color: gray; font-weight: bold">
+                        Mango @1,000/=
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        const hideShowBox = () => {
+            let box = document.getElementById('box')
+            box.hidden = box.hidden ? false : true
+            //box.onmouseover()
+        }
+    </script>
+
+</body>
+
+</html>
